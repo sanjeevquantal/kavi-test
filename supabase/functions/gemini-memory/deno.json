@@ -1,0 +1,9 @@
+
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "types": ["https://deno.land/x/supabase@1.11.7/mod.ts"]
+  }
+}

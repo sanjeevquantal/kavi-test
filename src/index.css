@@ -1,0 +1,112 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 99%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 262 80% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 262 80% 95%;
+    --accent-foreground: 262 80% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 262 80% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Improve touch targets on mobile */
+  @media (max-width: 768px) {
+    button, a, [role="button"] {
+      @apply min-h-10 min-w-10;
+    }
+    
+    h1 {
+      @apply text-xl md:text-2xl;
+    }
+    
+    .card-title {
+      @apply text-base md:text-lg;
+    }
+    
+    /* Improve form fields on mobile */
+    input, select, textarea {
+      @apply text-base;
+    }
+  }
+}
+
+@layer utilities {
+  .star-section {
+    @apply p-3 rounded-md border-l-4 border-primary/30 bg-secondary mb-3;
+  }
+
+  /* Responsive utilities */
+  .responsive-container {
+    @apply w-full px-4 md:px-6 lg:px-8;
+  }
+  
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+  
+  .responsive-padding {
+    @apply p-3 md:p-4 lg:p-6;
+  }
+  
+  .mobile-full-width {
+    @apply -mx-4 md:mx-0;
+  }
+  
+  /* Grid improvements for mobile */
+  .mobile-stack {
+    @apply flex flex-col sm:flex-row;
+  }
+  
+  .mobile-full {
+    @apply w-full sm:w-auto;
+  }
+  
+  /* Button adjustments for mobile */
+  .mobile-btn-stack {
+    @apply flex flex-col sm:flex-row gap-2;
+  }
+  
+  .mobile-btn-full {
+    @apply w-full sm:w-auto justify-center;
+  }
+}
